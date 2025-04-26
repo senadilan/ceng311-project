@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Global styles -->
+    <link rel="stylesheet" href="styles/global.css" />
+
+    <!-- Page specific styles -->
+    <link rel="stylesheet" href="styles/reigster-page.css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <main>
+      <!-- Page Heading -->
+      <div class="page-heading">
+        <h1>Register</h1>
+      </div>
+      <div class="container">
+        <div class="register-page-container">
+          <div class="register-block-container">
+            <img
+              class="register-form-logo"
+              src="images/logo.png"
+              alt="Casting Agency Logo"
+            />
+            <!-- Register Form -->
+            <form>
+              <div class="form-input">
+                <input
+                  type="text"
+                  id="full-name"
+                  name="full-name"
+                  placeholder="Enter your Full Name"
+                  required
+                />
+              </div>
+              <div class="form-input">
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Enter your E-mail"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="form-input">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Enter your password"
+                  required
+                />
+              </div>
+              <div class="form-input">
+                <input
+                  type="password"
+                  id="password-confirm"
+                  name="password-confirm"
+                  placeholder="Confirm your password"
+                  required
+                />
+              </div>
+              <div class="form-bottom">
+                <button class="login-submit" type="submit">Sign Up</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="login-link-block">
+          <a href="login.html"
+            ><p>Already have an account?</p>
+            <p>Login</p>
+          </a>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="./script/add-layout.js"></script>
+</html>

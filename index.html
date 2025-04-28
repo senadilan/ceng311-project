@@ -1,67 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <!-- Ensures proper text encoding for special characters -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Makes the website responsive on different screen sizes -->
-
-    <!-- Global styles -->
     <link rel="stylesheet" href="styles/global.css" />
-
-    <!-- Page-specific styles -->
     <link rel="stylesheet" href="styles/landing-page.css" />
-
+    <link rel="stylesheet" href="styles/actors-page.css" />
+    <link rel="stylesheet" href="styles/projects-page.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
     <title>Casting Agency</title>
-  </head>
-  <body>
+    <style>
+        .carousel {
+          
+            width: 60%;
+            margin: 20px auto; 
+            position: relative; 
+            padding: 0; 
+        }
+
+        .blue-box {
+            width: 100%;
+            height: 400px;
+            background-color: #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+        .blue-box img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 10;
+        }
+        .left-btn {
+            left: 0; 
+        }
+        .right-btn {
+            right: 0; 
+        }
+        .carousel-btn:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .slick-slide {
+            text-align: center;
+        }
+        .slick-slide img {
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
     <main>
-      <!-- CAROUSEL SECTION -->
-      <div class="carousel">
-        <!-- Left navigation button for the carousel -->
-        <button class="carousel-btn left-btn">&#10094;</button>
-
-        <!-- Placeholder for the carousel content -->
-        <div class="blue-box"></div>
-
-        <!-- Right navigation button for the carousel -->
-        <button class="carousel-btn right-btn">&#10095;</button>
-      </div>
-
-      <!-- Main container for the comments section -->
-      <div class="container">
-        <section class="comments">
-          <!-- Individual comment -->
-          <div class="comment">
-            <h3><strong>xxxxxxx</strong></h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed to
-              eutmod tempor incidudent ut labore et dolore...
-            </p>
-          </div>
-
-          <!-- Another comment -->
-          <div class="comment">
-            <h3><strong>xxxxxxx</strong></h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed to
-              eutmod tempor incidudent ut labore et dolore...
-            </p>
-          </div>
-
-          <!-- Third comment -->
-          <div class="comment">
-            <h3><strong>xxxxxxx</strong></h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed to
-              eutmod tempor incidudent ut labore et dolore...
-            </p>
-          </div>
-        </section>
-      </div>
+        <div class="carousel">
+            <button class="carousel-btn left-btn">&#10094;</button>
+            <div class="blue-box">
+                <img src="images/projects/bepanthol.jpg" alt="Image 1">
+                <img src="images/projects/chaplin.jpg" alt="Image 2">
+                <img src="images/projects/got.jpg" alt="Image 3">
+                <img src="images/projects/greenmile.jpg" alt="Image 4">
+            </div>
+            <button class="carousel-btn right-btn">&#10095;</button>
+        </div>
+        <div class="container">
+            <section class="comments">
+                <div class="comment">
+                    <h3><strong>xxxxxxx</strong></h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed to
+                        eutmod tempor incidudent ut labore et dolore...
+                    </p>
+                </div>
+                <div class="comment">
+                    <h3><strong>xxxxxxx</strong></h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed to
+                        eutmod tempor incidudent ut labore et dolore...
+                    </p>
+                </div>
+                <div class="comment">
+                    <h3><strong>xxxxxxx</strong></h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed to
+                        eutmod tempor incidudent ut labore et dolore...
+                    </p>
+                </div>
+            </section>
+        </div>
     </main>
-  </body>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script type="text/javascript" src="./script/add-layout.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.blue-box').slick({
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                prevArrow: $('.left-btn'),
+                nextArrow: $('.right-btn'),
+                fade: false,
+            });
+        });
+    </script>
+    <script type="text/javascript" src="./script/add-layout.js"></script>
+</body>
 </html>
